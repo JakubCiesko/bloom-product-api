@@ -1,15 +1,12 @@
 import json 
+import logging
 import asyncio 
-import logging 
 import argparse
 import pymongo.errors
+from app.stats import compute_and_store_stats
 from motor.motor_asyncio import AsyncIOMotorCollection
-from app.db import products_collection, events_collection
+from app.db import products_collection, events_collection, products_stats_collection
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
 logger = logging.getLogger(__name__)
 
 async def load_json_to_collection(json_file: str, collection:AsyncIOMotorCollection, collection_name:str="", empty_db:bool=True) -> None:
@@ -63,6 +60,7 @@ async def main(args):
         logger.info(f"Loading events from {args.events}")
         await load_json_to_collection(args.events, events_collection, "events", args.keep_db_content)
         await init_indexes("events")
+        #await init_stats()
 
 
 if __name__ == "__main__":

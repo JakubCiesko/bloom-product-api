@@ -7,4 +7,5 @@ client = AsyncIOMotorClient(MONGO_URI)
 db = client["bloomreach"]
 products_collection = db["products"]
 events_collection = db["events"]
-products_stats = db["products_stats"]
+products_stats_collection = db["products_stats"]
+category_stats_collection = db["category_stats"]
