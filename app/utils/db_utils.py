@@ -9,6 +9,18 @@ from app.db import products_collection, events_collection
 logger = logging.getLogger(__name__)
 
 async def load_json_to_collection(json_file: str, collection:AsyncIOMotorCollection, collection_name:str="", empty_db:bool=True) -> None:
+    """Loads JSON data into a MongoDB collection.
+
+    Args:
+        json_file (str): Path to the JSON file.
+        collection (AsyncIOMotorCollection): The MongoDB collection to populate.
+        collection_name (str): Name of the collection, used for logging.
+        empty_db (bool): Whether to clear the collection before inserting data (default: True).
+
+    Logs:
+        - Number of documents inserted
+        - Whether the collection was cleared
+        - Any errors during insertion"""
     try: 
         with open(json_file, "r", encoding="UTF-8") as f:
             data = json.load(f)
@@ -28,6 +40,14 @@ async def load_json_to_collection(json_file: str, collection:AsyncIOMotorCollect
         logger.error(f"Failed to populate collection with {json_file}: {e}") 
 
 async def init_indexes(collection_name: str) -> None:
+    """Creates necessary indexes on the specified MongoDB collection.
+
+    Args:
+        collection_name (str): Either 'products' or 'events'. Determines which collection's indexes to initialize.
+
+    Logs:
+        - Which indexes are created
+        - Errors in index creation"""
     try:
         match collection_name: 
             case "products":
@@ -51,6 +71,13 @@ async def init_indexes(collection_name: str) -> None:
 
 
 async def main(args):
+    """Entry point for seeding the MongoDB database.
+
+    Args:
+        args: Parsed command-line arguments including paths to JSON files and a flag for retaining DB content.
+
+    Loads product and/or event data into the database and initializes indexes for collections.
+    """
     if args.products:
         logger.info(f"Loading products from {args.products}")
         await load_json_to_collection(args.products, products_collection, "products", args.keep_db_content)
