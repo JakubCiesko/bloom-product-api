@@ -129,7 +129,9 @@ Logs a user interaction (`view` or `click`).
 ### `GET /force_update` (Optional Feature)
 Manually triggers a refresh of statistics and recommendation models.
 ---
-
+## Docs
+Automatically generated. Available at /docs route.
+---
 ## ✅ Testing
 
 Run unit tests using:

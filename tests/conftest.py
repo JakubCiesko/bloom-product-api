@@ -2,6 +2,8 @@ import pytest
 from ..app.main import app
 from httpx import AsyncClient, ASGITransport
 
+# this code fixes issues with event loop and pytests
+
 @pytest.fixture(scope="session")
 def anyio_backend():
     return "asyncio"

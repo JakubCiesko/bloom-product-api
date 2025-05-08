@@ -3,6 +3,7 @@ from httpx import AsyncClient
 
 @pytest.mark.anyio
 async def test_post_create_product_success(client: AsyncClient):
+    """Test product creation with valid data, ensuring a successful response."""
     new_product = {
         "id": 99999,
         "title": "Test Tee",
@@ -22,6 +23,7 @@ async def test_post_create_product_success(client: AsyncClient):
 
 @pytest.mark.anyio
 async def test_post_create_duplicate_product_fails(client: AsyncClient):
+    """Test product creation with a duplicate ID, ensuring it fails with a 400 error."""
     existing_product = {
         "id": 99999,  # Same as above
         "title": "Test Tee Again",
@@ -40,6 +42,7 @@ async def test_post_create_duplicate_product_fails(client: AsyncClient):
 
 @pytest.mark.anyio
 async def test_post_create_event_success(client: AsyncClient):
+    """Test event creation with valid data, ensuring a successful response."""
     new_event = {
         "user_id": 123,
         "product_id": 99999,
@@ -53,6 +56,7 @@ async def test_post_create_event_success(client: AsyncClient):
 
 @pytest.mark.anyio
 async def test_post_create_event_invalid_action_fails(client: AsyncClient):
+    """Test event creation with an invalid action, ensuring it fails with a 400 error."""
     invalid_event = {
         "user_id": 123,
         "product_id": 99999,

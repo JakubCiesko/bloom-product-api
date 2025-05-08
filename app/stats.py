@@ -1,4 +1,5 @@
 import numpy as np
+from typing import Any
 from datetime import datetime
 from app.db import (
     products_collection, 
@@ -9,16 +10,45 @@ from app.db import (
 )
 
 async def calculate_ctr(clicks: int, views: int) -> float:
+    """Calculate the click-through rate (CTR) based on the number of clicks and views.
+
+    Args:
+        clicks (int): The number of clicks.
+        views (int): The number of views.
+
+    Returns:
+        float: The CTR, which is the ratio of clicks to views. Returns 0.0 if views is 0."""
     return clicks / views if views else 0.0
 
 async def calculate_bounce_rate(clicks:int, views: int) -> float:
+    """Calculate the bounce rate based on the number of clicks and views.
+
+    Args:
+        clicks (int): The number of clicks.
+        views (int): The number of views.
+
+    Returns:
+        float: The bounce rate, which is the ratio of non-clicking viewers (views - clicks) to views. 
+              Returns 0.0 if views is less than clicks or if views is 0."""
     return (views - clicks) / views if views and views >= clicks else 0.0
 
 async def calculate_engagement(clicks: int, views: int) -> int: 
+    """Calculate the engagement score, which is the sum of clicks and views.
+
+    Args:
+        clicks (int): The number of clicks.
+        views (int): The number of views.
+
+    Returns:
+        int: The engagement score, which is the total of clicks and views."""
     return clicks + views
 
-
-async def compute_stats() -> list[dict]:
+async def compute_stats() -> list[dict[str, Any]]:
+    """Compute statistics for each product based on click and view actions in the events collection.
+    Returns:
+        list[dict]: A list of dictionaries, where each dictionary contains statistics for a product,
+                    including views, clicks, CTR, bounce rate, engagement, and unique view and click counts."""
+    
     pipeline = [
         {
             "$group": {
@@ -78,11 +108,19 @@ async def compute_stats() -> list[dict]:
     return product_stats
 
 async def store_stats(stats: list[dict]):
+    """Store the computed product statistics in the database.
+
+    Args:
+        stats (list[dict]): A list of dictionaries containing product statistics to be stored."""
     await products_stats_collection.delete_many({})
     if stats:
         await products_stats_collection.insert_many(stats)
 
 async def store_category_stats(category_stats: dict):
+    """Store the computed category statistics in the database.
+
+    Args:
+        category_stats (dict): A dictionary containing category statistics, where keys are categories and values are their respective stats."""
     for category, stats in category_stats.items():
         existing_stats = await category_stats_collection.find_one({"category": category})
         
@@ -97,7 +135,15 @@ async def store_category_stats(category_stats: dict):
                 **stats
             })
 
-async def compute_category_stats(category_name) -> dict:
+async def compute_category_stats(category_name) -> dict[str, dict[str, Any]]:
+    """Compute statistics for a specific category, including views, clicks, unique users, and engagement metrics.
+
+    Args:
+        category_name (str): The category name to compute statistics for.
+
+    Returns:
+        dict: A dictionary containing computed statistics for the category, including total views, clicks, unique users, and various engagement metrics.
+    """
     pipeline = [
         {
             "$lookup": {
@@ -156,6 +202,7 @@ async def compute_category_stats(category_name) -> dict:
     return category_stats
 
 async def compute_and_store_stats():
+    """Compute and store both product-level and category-level statistics. The function computes product-level stats such as CTR, bounce rate, engagement, and unique user counts. It also computes category-level stats like total views, total clicks, unique user counts, and other metrics, and stores all the statistics in the database. This function is called periodically to refresh stats."""
     stats = await compute_stats()
     await store_stats(stats)
     for category in STORED_CATEGORIES:
