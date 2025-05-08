@@ -1,6 +1,7 @@
 import random
 import logging 
 import asyncio
+from os import getenv
 from typing import Optional
 from datetime import datetime
 from fastapi import FastAPI, Request, Query
@@ -36,8 +37,8 @@ recommenders = {
 }
 
 updater = Updater(
-    recommender_refresh_time=300,
-    stats_refresh_time=300
+    recommender_refresh_time=getenv("RECOMMENDER_REFRESH_TIME", 300),
+    stats_refresh_time=getenv("STATS_REFRESH_TIME", 300)
 )
 
 @asynccontextmanager
