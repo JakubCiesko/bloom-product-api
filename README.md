@@ -2,6 +2,8 @@
 
 This is a FastAPI-based backend that provides an API for browsing products and getting recommendations based on user behavior and product co-occurrence. Built with asynchronous I/O, modular services, and test coverage, this project, I believe, demonstrates scalable backend design.
 
+    🧪 Built as part of a technical assessment for a backend internship. Feedback welcome!
+
 ---
 
 ## 📁 Project Structure
@@ -14,6 +16,7 @@ This is a FastAPI-based backend that provides an API for browsing products and g
 │   ├── models.py             # Data models (if any)
 │   ├── stats.py              # Product statistics logic
 │   ├── templates/            # HTML templates (e.g. index.html)
+│   │   ├── index.html
 │   ├── utils/                # Utility functions
 │   │   ├── db_utils.py
 │   │   └── utils.py
@@ -25,6 +28,7 @@ This is a FastAPI-based backend that provides an API for browsing products and g
 │   ├── test_index.py
 │   ├── test_products.py
 │   ├── test_recommendation.py
+│   ├── test_post_handlers.py
 ├── README.md
 ├── requirements.txt
 ```
@@ -88,23 +92,42 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ---
 
 ## 📡 API Endpoints
+📡 API Endpoints
+----------------
 
 ### `GET /`
-Returns a basic HTML page showing server time (`index.html`).
+Returns a basic HTML page with server time (from `index.html`).
+
+---
 
 ### `GET /products`
-Returns filtered products.
-**Query params**:
-- `id`, `title`, `category`, `min_price`, `max_price`, `color`, `material`, `sizes`, `brand`
+Returns products based on filter criteria and includes product-level and group-level statistics.
 
-### `GET /recommend`
-Returns recommended products.
-**Query params**:
-- `product_id` – ID of a reference product
-- `user_id` – If provided, uses user-personalized recommender
-- `recommend_n` – Number of products to recommend (default: 5)
-- `sample=true` – Return a sampled subset
+**Query Parameters**:
+- `id`, `title`, `category`, `min_price`, `max_price`
+- `color`, `material`, `sizes`, `brand`
 
+---
+
+### `GET /recommend` (Optional Feature)
+Returns recommended products based on co-occurrence or user-based preferences.
+
+**Query Parameters**:
+- `product_id`: Reference product ID
+- `user_id`: Use user-personalized recommender if provided
+- `recommend_n`: Number of products to recommend (default: 5)
+- `sample=true`: Randomly sample recommendations
+
+---
+
+### `POST /products`
+Creates a new product. Fails if the ID already exists.
+
+### `POST /events`
+Logs a user interaction (`view` or `click`).
+
+### `GET /force_update` (Optional Feature)
+Manually triggers a refresh of statistics and recommendation models.
 ---
 
 ## ✅ Testing
@@ -125,16 +148,12 @@ Test coverage includes:
 ## 💡 Ideas to Improve
 
 - Improve recommender fallback logic
+- Add CRUD operations
+- etc.
 ...
 ---
 
 ## 🧑 Author
 Jakub Čieško
 
-## Additional Info
-
-Built as part of a technical assessment for a backend internship position.  
-Feedback welcome!
-
----
 

@@ -143,7 +143,6 @@ async def create_product(product: ProductModel):
         logger.error(f"Product creation failed: {e}")
         return JSONResponse({"error": str(e)}, status_code=500)
 
-
 @app.post("/events", response_class=JSONResponse)
 async def create_event(event: EventModel):
     try:
@@ -157,7 +156,6 @@ async def create_event(event: EventModel):
         logger.error(f"Event logging failed: {e}")
         return JSONResponse({"error": str(e)}, status_code=500)
 
-
 @app.get("/force_update", response_class=JSONResponse)
 async def force_update():
     try: 
@@ -167,7 +165,5 @@ async def force_update():
         await updater.update_stats()
         return JSONResponse({"Status": "done"})
     except Exception as e: 
-        logger.error("Error occured during forced update: {e}")
+        logger.error(f"Error occured during forced update: {e}")
         return JSONResponse({"Error": f"{e}"}, status_code=500)
-
-        
