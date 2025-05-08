@@ -1,5 +1,7 @@
 from typing import Optional, Any 
+from ..db import STORED_CATEGORIES
 from motor.motor_asyncio import AsyncIOMotorCollection
+
 
 async def compose_product_query_parameters(
     id: Optional[int] = None,
@@ -16,7 +18,7 @@ async def compose_product_query_parameters(
         if id is not None:
             query["id"] = id
         if title:
-            query["title"] = {"$regex": title, "$options": "i"}
+            query["title"] = {"$regex": {title}, "$options": "i"}
         if category:
             query["category"] = category
         if color:
@@ -47,7 +49,7 @@ async def sanitize_product_output(product: dict[str, Any]) -> dict[str, Any]:
 
 async def get_products_from_collection(
         query:dict[str, Any], 
-        collection:AsyncIOMotorCollection, 
+        collection: AsyncIOMotorCollection, 
         stats_collection: AsyncIOMotorCollection) -> list:
     products_cursor = collection.find(query)
     products = []
@@ -57,3 +59,15 @@ async def get_products_from_collection(
         product = await sanitize_product_output(product) 
         products.append(product)
     return products 
+
+async def get_group_stats_from_collection(query: dict[str, Any], group_stats_collection: AsyncIOMotorCollection) -> dict: 
+    group_stats = {}
+    for category in STORED_CATEGORIES:
+        category_value = query.get(category, None)
+        if category_value: 
+            group_stats_cursor = group_stats_collection.find({"category": category_value})
+            group_stats[category] = [
+                {k: v for k, v in group_stat.items() if k != "_id"}
+                async for group_stat in group_stats_cursor
+            ]
+    return group_stats

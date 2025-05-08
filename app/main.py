@@ -13,11 +13,18 @@ from .services.recommender import (
 )
 from .utils.utils import (
     compose_product_query_parameters,
-    get_products_from_collection
+    get_products_from_collection, 
+    get_group_stats_from_collection
 )
 from .db import (
     products_collection, 
-    products_stats_collection
+    products_stats_collection,
+    category_stats_collection,
+    events_collection
+)
+from .models import (
+    ProductModel,
+    EventModel
 )
 
 logger = logging.getLogger('uvicorn.error')
@@ -83,12 +90,13 @@ async def get_products(
             brand
         )
         products = await get_products_from_collection(query, products_collection, products_stats_collection)
+        group_stats = await get_group_stats_from_collection(query, category_stats_collection)
         if products: 
-            response = JSONResponse(products)
+            response = JSONResponse({"products": products, "group_stats": group_stats})
         else: 
-            response = JSONResponse([], status_code=404) # might drop this, depends on needed behaviour
+            response = JSONResponse({"products": None, "group_stats": None}, status_code=404) # might drop this, depends on needed behaviour
     except Exception as e: 
-        response = JSONResponse([{"Error": f"{e}"}], status_code=500)
+        response = JSONResponse({"Error": f"{e}"}, status_code=500)
     return response 
 
 
@@ -121,3 +129,29 @@ async def recommend_product(product_id:int=None, user_id:int=None, recommend_n:i
         logger.error(f"Recommendation failed: {e}")
         response = JSONResponse([{"Error": f"{e}"}], status_code=500)
     return response
+
+@app.post("/products", response_class=JSONResponse)
+async def create_product(product: ProductModel):
+    try:
+        existing = await products_collection.find_one({"id": product.id})
+        if existing:
+            return JSONResponse({"error": "Product with this ID already exists."}, status_code=400)
+        await products_collection.insert_one(product.model_dump())
+        return JSONResponse({"message": "product creation success"})
+    except Exception as e:
+        logger.error(f"Product creation failed: {e}")
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+@app.post("/events", response_class=JSONResponse)
+async def create_event(event: EventModel):
+    try:
+        if event.action not in ["view", "click"]:
+            return JSONResponse({"error": "Invalid action. Must be 'view' or 'click'."}, status_code=400)
+        event_data = event.model_dump()
+        event_data["timestamp"] = event.timestamp or datetime.now()
+        await events_collection.insert_one(event_data)
+        return JSONResponse({"message": "event creation success"})
+    except Exception as e:
+        logger.error(f"Event logging failed: {e}")
+        return JSONResponse({"error": str(e)}, status_code=500)

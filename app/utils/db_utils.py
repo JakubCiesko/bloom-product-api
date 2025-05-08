@@ -59,7 +59,6 @@ async def main(args):
         logger.info(f"Loading events from {args.events}")
         await load_json_to_collection(args.events, events_collection, "events", args.keep_db_content)
         await init_indexes("events")
-        #await init_stats()
 
 
 if __name__ == "__main__":

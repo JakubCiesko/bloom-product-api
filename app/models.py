@@ -1,13 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import List, Optional
 from datetime import datetime
+from pydantic import BaseModel
+from typing import List, Optional
 
-class ProductStatsModel(BaseModel):
-    product_id: int
-    views: int
-    clicks: int
-    ctr: float
-    last_updated: datetime
 
 class ProductModel(BaseModel):
     id: int
@@ -18,7 +12,9 @@ class ProductModel(BaseModel):
     material: str
     sizes: List[str]
     brand: str
-    stats: Optional[ProductStatsModel] = None
 
-    class Config:
-        orm_mode = True
+class EventModel(BaseModel):
+    user_id: int
+    product_id: int
+    action: str  # "view" or "click"
+    timestamp: Optional[datetime] = None
