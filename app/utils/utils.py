@@ -1,4 +1,5 @@
 from typing import Optional, Any 
+from motor.motor_asyncio import AsyncIOMotorCollection
 
 async def compose_product_query_parameters(
     id: Optional[int] = None,
@@ -43,3 +44,16 @@ async def sanitize_product_output(product: dict[str, Any]) -> dict[str, Any]:
             stats["last_updated"] = stats["last_updated"].isoformat() 
         product["stats"] = stats
     return product      
+
+async def get_products_from_collection(
+        query:dict[str, Any], 
+        collection:AsyncIOMotorCollection, 
+        stats_collection: AsyncIOMotorCollection) -> list:
+    products_cursor = collection.find(query)
+    products = []
+    async for product in products_cursor:
+        stats = await stats_collection.find_one({"product_id": product["id"]})
+        product["stats"] = stats or {}
+        product = await sanitize_product_output(product) 
+        products.append(product)
+    return products 

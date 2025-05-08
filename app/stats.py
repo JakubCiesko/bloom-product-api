@@ -22,7 +22,7 @@ async def compute_stats() -> list[dict]:
             "views": doc["views"],
             "clicks": doc["clicks"],
             "ctr": ctr,
-            "last_updated": datetime.utcnow()
+            "last_updated": datetime.now()
         })
     return product_stats
 
