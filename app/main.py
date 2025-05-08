@@ -34,23 +34,24 @@ recommenders = {
     "user_independent": None
 }
 
+updater = Updater(
+    recommender_refresh_time=300,
+    stats_refresh_time=300
+)
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # set up regular statistics update 
-    global recommenders
+    global recommenders, updater
     user_independent_recommender = CoOccurenceRecommender(alpha_smoothing=3)
     user_dependent_recommender = UserBasedCollaborativeRecommender()
     await user_independent_recommender._initialize()
     await user_dependent_recommender._initialize()
     recommenders["user_dependent"] = user_dependent_recommender
     recommenders["user_independent"] = user_independent_recommender
-    updater = Updater(
-        recommender_refresh_time=300,
-        stats_refresh_time=300
-    )
-    asyncio.create_task(updater.periodic_recommender_updater(user_dependent_recommender))
-    asyncio.create_task(updater.periodic_recommender_updater(user_independent_recommender))
-    asyncio.create_task(updater.periodic_stats_updater())
+    asyncio.create_task(updater.periodic_recommender_update(user_dependent_recommender))
+    asyncio.create_task(updater.periodic_recommender_update(user_independent_recommender))
+    asyncio.create_task(updater.periodic_stats_update())
     yield
     # anything before shut down
 
@@ -155,3 +156,17 @@ async def create_event(event: EventModel):
     except Exception as e:
         logger.error(f"Event logging failed: {e}")
         return JSONResponse({"error": str(e)}, status_code=500)
+
+@app.get("/force_update", response_class=JSONResponse)
+async def force_update():
+    try: 
+        logger.info("Forcing update of recommenders and stats.")
+        await updater.update_recommender(recommenders["user_dependent"])
+        await updater.update_recommender(recommenders["user_independent"])
+        await updater.update_stats()
+        return JSONResponse({"Status": "done"})
+    except Exception as e: 
+        logger.error("Error occured during forced update: {e}")
+        return JSONResponse({"Error": f"{e}"}, status_code=500)
+
+        
