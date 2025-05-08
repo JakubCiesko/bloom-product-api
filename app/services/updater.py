@@ -27,7 +27,7 @@ class Updater:
             try:
                 logger.info(f"Reinitializing recommender: {type(recommender).__name__}")
                 await recommender._initialize()
-                logger.info("Reinitialization finished.")
+                logger.info(f"Reinitialization finished [{type(recommender).__name__}].")
             except Exception as e:
                 logger.error(f"Recommender could not be updated: {e}")
             await asyncio.sleep(self.stats_refresh_time) 
