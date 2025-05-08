@@ -1,4 +1,4 @@
-# 🛍️ Product Recommendation API
+# 🛍️ Product API
 
 This is a FastAPI-based backend that provides an API for browsing products and getting recommendations based on user behavior and product co-occurrence. Built with asynchronous I/O, modular services, and test coverage, this project, I believe, demonstrates scalable backend design.
 
