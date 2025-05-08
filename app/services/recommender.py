@@ -162,8 +162,11 @@ class UserBasedCollaborativeRecommender(RecommenderBase):
     
     def _compute_similarity_matrix(self):
         """Compute cosine similarity between all user vectors."""
-        self.similarity_matrix = cosine_similarity(self.user_item_matrix)
-    
+        try: 
+            self.similarity_matrix = cosine_similarity(self.user_item_matrix)
+        except Exception as e: 
+            pass
+
     @cached(ttl=300, cache=SimpleMemoryCache)
     async def recommend(self, user_id: int, top_n: int = 5, **kwargs) -> list[int]:
         """Recommend products for a user based on user similarity scores.
