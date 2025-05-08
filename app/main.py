@@ -157,6 +157,7 @@ async def create_event(event: EventModel):
         logger.error(f"Event logging failed: {e}")
         return JSONResponse({"error": str(e)}, status_code=500)
 
+
 @app.get("/force_update", response_class=JSONResponse)
 async def force_update():
     try: 
