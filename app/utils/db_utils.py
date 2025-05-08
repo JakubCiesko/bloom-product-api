@@ -3,9 +3,8 @@ import logging
 import asyncio 
 import argparse
 import pymongo.errors
-from app.stats import compute_and_store_stats
 from motor.motor_asyncio import AsyncIOMotorCollection
-from app.db import products_collection, events_collection, products_stats_collection
+from app.db import products_collection, events_collection
 
 logger = logging.getLogger(__name__)
 
