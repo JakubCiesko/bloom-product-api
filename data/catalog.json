@@ -1,0 +1,1002 @@
+[
+    {
+        "id": 1,
+        "title": "Classic Cotton Tee",
+        "category": "t-shirts",
+        "price": 19.99,
+        "color": "White",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "FashionCo"
+    },
+    {
+        "id": 2,
+        "title": "Vibrant Snapback Cap",
+        "category": "caps",
+        "price": 14.99,
+        "color": "Red",
+        "material": "Polyester",
+        "sizes": ["One Size"],
+        "brand": "CapMaster"
+    },
+    {
+        "id": 3,
+        "title": "Urban Street Sneakers",
+        "category": "shoes",
+        "price": 59.99,
+        "color": "Black",
+        "material": "Leather",
+        "sizes": [7, 8, 9, 10, 11],
+        "brand": "ShoeHub"
+    },
+    {
+        "id": 4,
+        "title": "Winter Warmth Gloves",
+        "category": "gloves",
+        "price": 25.99,
+        "color": "Gray",
+        "material": "Wool",
+        "sizes": ["M", "L"],
+        "brand": "HandHeat"
+    },
+    {
+        "id": 5,
+        "title": "Lightweight Summer Jacket",
+        "category": "jackets",
+        "price": 49.99,
+        "color": "Blue",
+        "material": "Nylon",
+        "sizes": ["S", "M", "L"],
+        "brand": "JacketPro"
+    },
+    {
+        "id": 6,
+        "title": "Graphic Tee",
+        "category": "t-shirts",
+        "price": 22.99,
+        "color": "Black",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "UrbanWear"
+    },
+    {
+        "id": 7,
+        "title": "Mesh Sports Cap",
+        "category": "caps",
+        "price": 18.99,
+        "color": "Blue",
+        "material": "Mesh",
+        "sizes": ["One Size"],
+        "brand": "FitCap"
+    },
+    {
+        "id": 8,
+        "title": "Casual Loafers",
+        "category": "shoes",
+        "price": 45.99,
+        "color": "Brown",
+        "material": "Suede",
+        "sizes": [8, 9, 10, 11],
+        "brand": "ComfortFoot"
+    },
+    {
+        "id": 9,
+        "title": "Leather Driving Gloves",
+        "category": "gloves",
+        "price": 35.99,
+        "color": "Black",
+        "material": "Leather",
+        "sizes": ["S", "M", "L"],
+        "brand": "GripGlove"
+    },
+    {
+        "id": 10,
+        "title": "Denim Jacket",
+        "category": "jackets",
+        "price": 69.99,
+        "color": "Denim Blue",
+        "material": "Denim",
+        "sizes": ["M", "L", "XL"],
+        "brand": "JeanStyle"
+    },
+    {
+        "id": 11,
+        "title": "Striped Tee",
+        "category": "t-shirts",
+        "price": 20.99,
+        "color": "Navy",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L"],
+        "brand": "MarineWave"
+    },
+    {
+        "id": 12,
+        "title": "Classic Baseball Cap",
+        "category": "caps",
+        "price": 12.99,
+        "color": "White",
+        "material": "Cotton",
+        "sizes": ["One Size"],
+        "brand": "BallCapKings"
+    },
+    {
+        "id": 13,
+        "title": "Running Trainers",
+        "category": "shoes",
+        "price": 79.99,
+        "color": "Gray",
+        "material": "Mesh",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "RunFast"
+    },
+    {
+        "id": 14,
+        "title": "Thermal Gloves",
+        "category": "gloves",
+        "price": 29.99,
+        "color": "Black",
+        "material": "Thermal",
+        "sizes": ["M", "L"],
+        "brand": "ColdShield"
+    },
+    {
+        "id": 15,
+        "title": "Puffer Jacket",
+        "category": "jackets",
+        "price": 89.99,
+        "color": "Green",
+        "material": "Polyester",
+        "sizes": ["L", "XL", "XXL"],
+        "brand": "WarmCoat"
+    },
+    {
+        "id": 16,
+        "title": "V-neck Tee",
+        "category": "t-shirts",
+        "price": 18.99,
+        "color": "Olive",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "SimpleList"
+    },
+    {
+        "id": 17,
+        "title": "Flat Brim Cap",
+        "category": "caps",
+        "price": 15.99,
+        "color": "Black",
+        "material": "Polyester",
+        "sizes": ["One Size"],
+        "brand": "FlatWorld"
+    },
+    {
+        "id": 18,
+        "title": "Classic Leather Boots",
+        "category": "shoes",
+        "price": 129.99,
+        "color": "Black",
+        "material": "Leather",
+        "sizes": [8, 9, 10, 11, 12],
+        "brand": "BootCraft"
+    },
+    {
+        "id": 19,
+        "title": "Fingerless Fitness Gloves",
+        "category": "gloves",
+        "price": 15.99,
+        "color": "Red",
+        "material": "Synthetic",
+        "sizes": ["S", "M", "L"],
+        "brand": "FitHand"
+    },
+    {
+        "id": 20,
+        "title": "Hooded Jacket",
+        "category": "jackets",
+        "price": 74.99,
+        "color": "Gray",
+        "material": "Fleece",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "CozyTop"
+    },
+    {
+        "id": 21,
+        "title": "Long Sleeve Tee",
+        "category": "t-shirts",
+        "price": 24.99,
+        "color": "Maroon",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "SleeveStyle"
+    },
+    {
+        "id": 22,
+        "title": "Vintage Trucker Cap",
+        "category": "caps",
+        "price": 18.99,
+        "color": "Tan",
+        "material": "Cotton",
+        "sizes": ["One Size"],
+        "brand": "RetroCaps"
+    },
+    {
+        "id": 23,
+        "title": "Chukka Boots",
+        "category": "shoes",
+        "price": 99.99,
+        "color": "Beige",
+        "material": "Leather",
+        "sizes": [9, 10, 11, 12],
+        "brand": "BootsCo"
+    },
+    {
+        "id": 24,
+        "title": "Waterproof Gloves",
+        "category": "gloves",
+        "price": 31.99,
+        "color": "Navy",
+        "material": "Nylon",
+        "sizes": ["M", "L", "XL"],
+        "brand": "RainGuard"
+    },
+    {
+        "id": 25,
+        "title": "Leather Bomber Jacket",
+        "category": "jackets",
+        "price": 149.99,
+        "color": "Brown",
+        "material": "Leather",
+        "sizes": ["M", "L", "XL"],
+        "brand": "AeroWear"
+    },
+    {
+        "id": 26,
+        "title": "Crew Neck Tee",
+        "category": "t-shirts",
+        "price": 17.50,
+        "color": "Black",
+        "material": "Cotton",
+        "sizes": ["S", "M", "XL"],
+        "brand": "BasicBeat"
+    },
+    {
+        "id": 27,
+        "title": "Biker Cap",
+        "category": "caps",
+        "price": 20.00,
+        "color": "Gray",
+        "material": "Leather",
+        "sizes": ["One Size"],
+        "brand": "RoadMaster"
+    },
+    {
+        "id": 28,
+        "title": "Casual Slip-ons",
+        "category": "shoes",
+        "price": 49.99,
+        "color": "Gray",
+        "material": "Canvas",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "SlipStream"
+    },
+    {
+        "id": 29,
+        "title": "Formal Gloves",
+        "category": "gloves",
+        "price": 42.99,
+        "color": "Brown",
+        "material": "Leather",
+        "sizes": ["M", "L"],
+        "brand": "ClassyTouch"
+    },
+    {
+        "id": 30,
+        "title": "Windbreaker Jacket",
+        "category": "jackets",
+        "price": 64.99,
+        "color": "Orange",
+        "material": "Polyester",
+        "sizes": ["L", "XL", "XXL"],
+        "brand": "BreezeGuard"
+    },
+    {
+        "id": 31,
+        "title": "Henley Tee",
+        "category": "t-shirts",
+        "price": 21.99,
+        "color": "Forest Green",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "NatureLine"
+    },
+    {
+        "id": 32,
+        "title": "Vintage Flat Cap",
+        "category": "caps",
+        "price": 22.50,
+        "color": "Olive",
+        "material": "Wool",
+        "sizes": ["One Size"],
+        "brand": "OldSchool"
+    },
+    {
+        "id": 33,
+        "title": "High-top Sneakers",
+        "category": "shoes",
+        "price": 69.99,
+        "color": "White",
+        "material": "Leather",
+        "sizes": [7, 8, 9, 10, 11],
+        "brand": "SneakPeak"
+    },
+    {
+        "id": 34,
+        "title": "Gardening Gloves",
+        "category": "gloves",
+        "price": 19.99,
+        "color": "Green",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L"],
+        "brand": "PlantCo"
+    },
+    {
+        "id": 35,
+        "title": "Denim Trucker Jacket",
+        "category": "jackets",
+        "price": 79.99,
+        "color": "Light Blue",
+        "material": "Denim",
+        "sizes": ["S", "M", "L"],
+        "brand": "DenimGoods"
+    },
+    {
+        "id": 36,
+        "title": "Embossed Logo Tee",
+        "category": "t-shirts",
+        "price": 23.99,
+        "color": "Heather Gray",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "LogoStyle"
+    },
+    {
+        "id": 37,
+        "title": "Wool Tweed Cap",
+        "category": "caps",
+        "price": 25.00,
+        "color": "Dark Brown",
+        "material": "Wool",
+        "sizes": ["One Size"],
+        "brand": "TweedCo"
+    },
+    {
+        "id": 38,
+        "title": "Ankle Boots",
+        "category": "shoes",
+        "price": 89.99,
+        "color": "Black",
+        "material": "Suede",
+        "sizes": [8, 9, 10, 11, 12],
+        "brand": "AnkleHigh"
+    },
+    {
+        "id": 39,
+        "title": "Padded Cycling Gloves",
+        "category": "gloves",
+        "price": 28.99,
+        "color": "Yellow",
+        "material": "Mesh",
+        "sizes": ["S", "M", "L"],
+        "brand": "CycleGear"
+    },
+    {
+        "id": 40,
+        "title": "Quilted Vest Jacket",
+        "category": "jackets",
+        "price": 59.99,
+        "color": "Burgundy",
+        "material": "Polyester",
+        "sizes": ["M", "L", "XL"],
+        "brand": "VestWear"
+    },
+    {
+        "id": 41,
+        "title": "Artistic Print Tee",
+        "category": "t-shirts",
+        "price": 26.99,
+        "color": "Charcoal",
+        "material": "Viscose",
+        "sizes": ["S", "M", "L"],
+        "brand": "ArtFash"
+    },
+    {
+        "id": 42,
+        "title": "Corduroy Cap",
+        "category": "caps",
+        "price": 18.00,
+        "color": "Khaki",
+        "material": "Corduroy",
+        "sizes": ["One Size"],
+        "brand": "CordCap"
+    },
+    {
+        "id": 43,
+        "title": "Espadrilles",
+        "category": "shoes",
+        "price": 39.99,
+        "color": "Navy",
+        "material": "Canvas",
+        "sizes": [6, 7, 8, 9],
+        "brand": "BeachStep"
+    },
+    {
+        "id": 44,
+        "title": "Winter Ski Gloves",
+        "category": "gloves",
+        "price": 49.99,
+        "color": "Ice Blue",
+        "material": "Synthetic",
+        "sizes": ["L", "XL"],
+        "brand": "SnowShield"
+    },
+    {
+        "id": 45,
+        "title": "Field Jacket",
+        "category": "jackets",
+        "price": 94.99,
+        "color": "Sage",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "Outland"
+    },
+    {
+        "id": 46,
+        "title": "Tie-Dye Tee",
+        "category": "t-shirts",
+        "price": 28.99,
+        "color": "Rainbow",
+        "material": "Cotton",
+        "sizes": ["M", "XL"],
+        "brand": "DyeTrend"
+    },
+    {
+        "id": 47,
+        "title": "Canvas Painter Cap",
+        "category": "caps",
+        "price": 17.50,
+        "color": "Lime",
+        "material": "Cotton",
+        "sizes": ["One Size"],
+        "brand": "ArtCap"
+    },
+    {
+        "id": 48,
+        "title": "Moccasin Flats",
+        "category": "shoes",
+        "price": 54.99,
+        "color": "Rust",
+        "material": "Leather",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "FlatStyle"
+    },
+    {
+        "id": 49,
+        "title": "Work Gloves",
+        "category": "gloves",
+        "price": 22.99,
+        "color": "Tan",
+        "material": "Leather",
+        "sizes": ["M", "L", "XL"],
+        "brand": "WorkGrip"
+    },
+    {
+        "id": 50,
+        "title": "Parka Jacket",
+        "category": "jackets",
+        "price": 139.99,
+        "color": "Dark Green",
+        "material": "Polyester",
+        "sizes": ["L", "XL", "XXL"],
+        "brand": "PolarWear"
+    },
+    {
+        "id": 51,
+        "title": "Polo Tee",
+        "category": "t-shirts",
+        "price": 32.99,
+        "color": "Sky Blue",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L"],
+        "brand": "SmartCasual"
+    },
+    {
+        "id": 52,
+        "title": "Snapback Hat",
+        "category": "caps",
+        "price": 19.00,
+        "color": "Purple",
+        "material": "Polyester",
+        "sizes": ["One Size"],
+        "brand": "SnapTrend"
+    },
+    {
+        "id": 53,
+        "title": "Trail Running Shoes",
+        "category": "shoes",
+        "price": 92.99,
+        "color": "Khaki",
+        "material": "Mesh",
+        "sizes": [7, 8, 9, 10],
+        "brand": "TrailKing"
+    },
+    {
+        "id": 54,
+        "title": "Formal Evening Gloves",
+        "category": "gloves",
+        "price": 34.99,
+        "color": "Black",
+        "material": "Satin",
+        "sizes": ["One Size"],
+        "brand": "EvenHand"
+    },
+    {
+        "id": 55,
+        "title": "Varsity Jacket",
+        "category": "jackets",
+        "price": 119.99,
+        "color": "Navy & White",
+        "material": "Wool",
+        "sizes": ["M", "L", "XL"],
+        "brand": "UniSpirit"
+    },
+    {
+        "id": 56,
+        "title": "Graphic Logo Tee",
+        "category": "t-shirts",
+        "price": 24.99,
+        "color": "Steel",
+        "material": "Cotton",
+        "sizes": ["L", "XL"],
+        "brand": "GraphicEdge"
+    },
+    {
+        "id": 57,
+        "title": "Golf Cap",
+        "category": "caps",
+        "price": 22.50,
+        "color": "Green",
+        "material": "Polyester",
+        "sizes": ["One Size"],
+        "brand": "GolfLine"
+    },
+    {
+        "id": 58,
+        "title": "Classic Oxfords",
+        "category": "shoes",
+        "price": 125.99,
+        "color": "Tan",
+        "material": "Leather",
+        "sizes": [8, 9, 10, 11, 12],
+        "brand": "OxfordMania"
+    },
+    {
+        "id": 59,
+        "title": "Knitted Gloves",
+        "category": "gloves",
+        "price": 18.99,
+        "color": "Red",
+        "material": "Wool",
+        "sizes": ["S", "M"],
+        "brand": "KnitHand"
+    },
+    {
+        "id": 60,
+        "title": "Peacoat Jacket",
+        "category": "jackets",
+        "price": 129.99,
+        "color": "Black",
+        "material": "Wool",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "NauticalWear"
+    },
+    {
+        "id": 61,
+        "title": "Striped Polo Tee",
+        "category": "t-shirts",
+        "price": 33.99,
+        "color": "Blue & White",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L"],
+        "brand": "NavalStripe"
+    },
+    {
+        "id": 62,
+        "title": "Visor Cap",
+        "category": "caps",
+        "price": 15.50,
+        "color": "Black",
+        "material": "Polyester",
+        "sizes": ["One Size"],
+        "brand": "ShadePro"
+    },
+    {
+        "id": 63,
+        "title": "Canvas High-tops",
+        "category": "shoes",
+        "price": 67.99,
+        "color": "Red",
+        "material": "Canvas",
+        "sizes": [7, 8, 9, 10, 11],
+        "brand": "Canvasy"
+    },
+    {
+        "id": 64,
+        "title": "Tactical Gloves",
+        "category": "gloves",
+        "price": 48.99,
+        "color": "Black",
+        "material": "Kevlar",
+        "sizes": ["M", "L"],
+        "brand": "PowerGrip"
+    },
+    {
+        "id": 65,
+        "title": "Softshell Jacket",
+        "category": "jackets",
+        "price": 89.99,
+        "color": "Gray",
+        "material": "Polyester",
+        "sizes": ["S", "M", "L"],
+        "brand": "SoftArmor"
+    },
+    {
+        "id": 66,
+        "title": "Pocket Tee",
+        "category": "t-shirts",
+        "price": 19.99,
+        "color": "Red",
+        "material": "Cotton",
+        "sizes": ["M", "L"],
+        "brand": "PocketLife"
+    },
+    {
+        "id": 67,
+        "title": "Denim Baseball Cap",
+        "category": "caps",
+        "price": 18.99,
+        "color": "Denim Blue",
+        "material": "Denim",
+        "sizes": ["One Size"],
+        "brand": "DenimCap"
+    },
+    {
+        "id": 68,
+        "title": "Formal Derbies",
+        "category": "shoes",
+        "price": 112.99,
+        "color": "Burgundy",
+        "material": "Leather",
+        "sizes": [7, 8, 9, 10, 11],
+        "brand": "Formality"
+    },
+    {
+        "id": 69,
+        "title": "Snowboard Gloves",
+        "category": "gloves",
+        "price": 55.99,
+        "color": "White",
+        "material": "Synthetic",
+        "sizes": ["L", "XL"],
+        "brand": "BoardHands"
+    },
+    {
+        "id": 70,
+        "title": "Overcoat Jacket",
+        "category": "jackets",
+        "price": 159.99,
+        "color": "Camel",
+        "material": "Wool",
+        "sizes": ["M", "L", "XL"],
+        "brand": "ClassicLine"
+    },
+    {
+        "id": 71,
+        "title": "Basic Tee",
+        "category": "t-shirts",
+        "price": 14.99,
+        "color": "Gray",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "CoreWear"
+    },
+    {
+        "id": 72,
+        "title": "Cotton Beanie Cap",
+        "category": "caps",
+        "price": 16.50,
+        "color": "Blue",
+        "material": "Cotton",
+        "sizes": ["One Size"],
+        "brand": "BeanieEssentials"
+    },
+    {
+        "id": 73,
+        "title": "Espadrille Flats",
+        "category": "shoes",
+        "price": 37.99,
+        "color": "Coral",
+        "material": "Canvas",
+        "sizes": [5, 6, 7, 8],
+        "brand": "SeasideStep"
+    },
+    {
+        "id": 74,
+        "title": "Woolen Mittens",
+        "category": "gloves",
+        "price": 23.99,
+        "color": "Beige",
+        "material": "Wool",
+        "sizes": ["M"],
+        "brand": "WarmFingers"
+    },
+    {
+        "id": 75,
+        "title": "Bomber Jacket",
+        "category": "jackets",
+        "price": 109.99,
+        "color": "Black",
+        "material": "Nylon",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "FlightGear"
+    },
+    {
+        "id": 76,
+        "title": "Raglan Sleeve Tee",
+        "category": "t-shirts",
+        "price": 22.99,
+        "color": "White & Gray",
+        "material": "Polyester",
+        "sizes": ["S", "M", "L"],
+        "brand": "SportEase"
+    },
+    {
+        "id": 77,
+        "title": "Patchwork Cap",
+        "category": "caps",
+        "price": 21.99,
+        "color": "Multicolor",
+        "material": "Cotton",
+        "sizes": ["One Size"],
+        "brand": "PatchArt"
+    },
+    {
+        "id": 78,
+        "title": "Casual Sneakers",
+        "category": "shoes",
+        "price": 59.99,
+        "color": "Teal",
+        "material": "Synthetic",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "CasualStep"
+    },
+    {
+        "id": 79,
+        "title": "Thinsulate Gloves",
+        "category": "gloves",
+        "price": 49.99,
+        "color": "Black",
+        "material": "Synthetic",
+        "sizes": ["M", "L", "XL"],
+        "brand": "InsuHeat"
+    },
+    {
+        "id": 80,
+        "title": "Military Jacket",
+        "category": "jackets",
+        "price": 144.99,
+        "color": "Olive",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "ArmyStyle"
+    },
+    {
+        "id": 81,
+        "title": "Pocket Tee",
+        "category": "t-shirts",
+        "price": 19.49,
+        "color": "Red",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "PocketTrend"
+    },
+    {
+        "id": 82,
+        "title": "Wool Felt Cap",
+        "category": "caps",
+        "price": 26.99,
+        "color": "Dark Blue",
+        "material": "Wool",
+        "sizes": ["One Size"],
+        "brand": "FeltCap"
+    },
+    {
+        "id": 83,
+        "title": "Oxford Shoes",
+        "category": "shoes",
+        "price": 109.99,
+        "color": "Black",
+        "material": "Leather",
+        "sizes": [7, 8, 9, 10, 11],
+        "brand": "LuxeLeather"
+    },
+    {
+        "id": 84,
+        "title": "Knitted Winter Gloves",
+        "category": "gloves",
+        "price": 22.99,
+        "color": "Purple",
+        "material": "Wool",
+        "sizes": ["S", "M"],
+        "brand": "WinterWarm"
+    },
+    {
+        "id": 85,
+        "title": "Duffle Coat",
+        "category": "jackets",
+        "price": 169.99,
+        "color": "Navy",
+        "material": "Wool",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "ClassicFash"
+    },
+    {
+        "id": 86,
+        "title": "Henley Neck Tee",
+        "category": "t-shirts",
+        "price": 23.99,
+        "color": "Olive",
+        "material": "Cotton",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "HenleyWear"
+    },
+    {
+        "id": 87,
+        "title": "Sun Visor Cap",
+        "category": "caps",
+        "price": 18.99,
+        "color": "Pink",
+        "material": "Plastic",
+        "sizes": ["One Size"],
+        "brand": "SunShield"
+    },
+    {
+        "id": 88,
+        "title": "Low-top Sneakers",
+        "category": "shoes",
+        "price": 69.99,
+        "color": "Gray",
+        "material": "Leather",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "LowWalk"
+    },
+    {
+        "id": 89,
+        "title": "Leather Gloves",
+        "category": "gloves",
+        "price": 39.99,
+        "color": "Dark Brown",
+        "material": "Leather",
+        "sizes": ["M", "L"],
+        "brand": "LeatherLux"
+    },
+    {
+        "id": 90,
+        "title": "Ski Jacket",
+        "category": "jackets",
+        "price": 189.99,
+        "color": "Bright Red",
+        "material": "Nylon",
+        "sizes": ["M", "L", "XL"],
+        "brand": "SnowTech"
+    },
+    {
+        "id": 91,
+        "title": "Longline Tee",
+        "category": "t-shirts",
+        "price": 25.99,
+        "color": "Black & White",
+        "material": "Viscose",
+        "sizes": ["S", "M", "L"],
+        "brand": "LongTrend"
+    },
+    {
+        "id": 92,
+        "title": "Classic Flat Cap",
+        "category": "caps",
+        "price": 20.50,
+        "color": "Charcoal",
+        "material": "Wool",
+        "sizes": ["One Size"],
+        "brand": "FlatCo"
+    },
+    {
+        "id": 93,
+        "title": "Knee-high Boots",
+        "category": "shoes",
+        "price": 139.99,
+        "color": "Gray",
+        "material": "Suede",
+        "sizes": [8, 9, 10],
+        "brand": "HighFashion"
+    },
+    {
+        "id": 94,
+        "title": "Motorcycle Gloves",
+        "category": "gloves",
+        "price": 54.99,
+        "color": "Black",
+        "material": "Leather",
+        "sizes": ["M", "L", "XL"],
+        "brand": "RideReady"
+    },
+    {
+        "id": 95,
+        "title": "Rain Jacket",
+        "category": "jackets",
+        "price": 119.99,
+        "color": "Yellow",
+        "material": "Polyester",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "RainWear"
+    },
+    {
+        "id": 96,
+        "title": "Tunic Tee",
+        "category": "t-shirts",
+        "price": 26.49,
+        "color": "Lavender",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "FlowStyle"
+    },
+    {
+        "id": 97,
+        "title": "Pom Pom Beanie",
+        "category": "caps",
+        "price": 16.99,
+        "color": "Burgundy",
+        "material": "Wool",
+        "sizes": ["One Size"],
+        "brand": "BeanieHub"
+    },
+    {
+        "id": 98,
+        "title": "Hiking Boots",
+        "category": "shoes",
+        "price": 119.99,
+        "color": "Olive Green",
+        "material": "Leather",
+        "sizes": [6, 7, 8, 9, 10],
+        "brand": "NatureTrail"
+    },
+    {
+        "id": 99,
+        "title": "Fingerless Gloves",
+        "category": "gloves",
+        "price": 19.99,
+        "color": "Gray",
+        "material": "Wool",
+        "sizes": ["S", "M"],
+        "brand": "FreeFingers"
+    },
+    {
+        "id": 100,
+        "title": "Utility Jacket",
+        "category": "jackets",
+        "price": 129.99,
+        "color": "Charcoal",
+        "material": "Cotton",
+        "sizes": ["M", "L", "XL"],
+        "brand": "UtilityGear"
+    }
+]

@@ -7,9 +7,6 @@ venv/
 .idea/
 .vscode/
 *.pid
-
-data/*.json
-
 .coverage
 htmlcov/
 .tox/
