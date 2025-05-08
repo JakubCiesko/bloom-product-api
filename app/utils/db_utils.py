@@ -87,7 +87,6 @@ async def main(args):
         await load_json_to_collection(args.events, events_collection, "events", args.keep_db_content)
         await init_indexes("events")
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Seed MongoDB with product and event data.")
     parser.add_argument('--products', help='Path to products JSON file')
