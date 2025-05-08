@@ -2,7 +2,7 @@
 
 This is a FastAPI-based backend that provides an API for browsing products and getting recommendations based on user behavior and product co-occurrence. Built with asynchronous I/O, modular services, and test coverage, this project, I believe, demonstrates scalable backend design.
 
-    🧪 Built as part of a technical assessment for a backend internship. Feedback welcome!
+    🧪 Built as part of a technical assessment for an internship. Feedback welcome!
 
 ---
 
@@ -149,7 +149,8 @@ Test coverage includes:
 
 - Improve recommender fallback logic
 - Add CRUD operations
-- etc.
+- Try out KerasRS and learn something new
+- Etc.
 ...
 ---
 
