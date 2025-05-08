@@ -37,8 +37,8 @@ recommenders = {
 }
 
 updater = Updater(
-    recommender_refresh_time=getenv("RECOMMENDER_REFRESH_TIME", 300),
-    stats_refresh_time=getenv("STATS_REFRESH_TIME", 300)
+    recommender_refresh_time=int(getenv("RECOMMENDER_REFRESH_TIME", 300)),
+    stats_refresh_time=int(getenv("STATS_REFRESH_TIME", 300))
 )
 
 @asynccontextmanager
